@@ -1,4 +1,4 @@
-# AI Research Paper Summarizer (Multilingual, QA-Enabled)
+# AI Powered Research Paper Summarizer & Insight Extractor
 AI-powered web application that ingests research papers in PDF format, generates concise abstractive summaries, and answers user questions about the content. The system supports multilingual summaries and provides an interactive, card-based web interface.
 ## Overview
 
