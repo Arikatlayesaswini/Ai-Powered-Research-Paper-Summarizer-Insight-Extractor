@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Summary • AI Research Paper Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <h1>Summary</h1>
+      <p class="app-subtitle">
+        Upload a research paper and generate a summary with key points.
+      </p>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <!-- Upload -->
+    <section class="upload-section">
+      <h2 class="section-title">Upload paper</h2>
+      <div class="upload-box">
+        <input type="file" id="pdfFile" accept=".pdf" />
+        <button id="uploadBtn" class="primary">Upload PDF</button>
+      </div>
+    </section>
+
+    <!-- Summary controls -->
+    <section class="content-section">
+      <div class="card">
+        <h2>Summary options</h2>
+
+        <div class="field-row">
+          <span class="field-label">Length</span>
+          <div class="field-options">
+            <label><input type="radio" name="summaryLength" value="short" /> Short</label>
+            <label><input type="radio" name="summaryLength" value="medium" checked /> Medium</label>
+            <label><input type="radio" name="summaryLength" value="long" /> Long</label>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <span class="field-label">Language</span>
+          <select id="summaryLanguage">
+            <option value="en" selected>English</option>
+            <option value="te">Telugu</option>
+            <option value="hi">Hindi</option>
+          </select>
+        </div>
+
+        <p class="hint">
+          The summary will be generated in the selected language.
+        </p>
+
+        <div class="button-row">
+          <button id="summaryBtn" class="primary">Get Summary</button>
+          <button id="downloadSummaryBtn" disabled>Download</button>
+          <button id="copySummaryBtn" disabled>Copy</button>
+          <button id="keyPointsBtn" disabled>Key Points</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+      <h2 class="section-title">Summary result</h2>
+      <pre id="result" class="result-box">Waiting for input...</pre>
+
+      <div class="card keypoints-card">
+        <h3>Key points</h3>
+        <ul id="keyPointsList"></ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="summary.js"></script>
+</body>
+</html>

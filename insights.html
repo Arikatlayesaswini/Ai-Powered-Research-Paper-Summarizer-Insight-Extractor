@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Key Insights • AI Research Paper Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <h1>Key Insights</h1>
+      <p class="app-subtitle">
+        Get main contributions, methods, and results for the last uploaded paper.
+      </p>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <section class="content-section">
+      <div class="card">
+        <p>Click the button below to fetch structured insights from the last uploaded paper.</p>
+        <button id="insightsBtn" class="primary">Get Key Insights</button>
+      </div>
+
+      <section class="results-section">
+        <h2 class="section-title">Insights result</h2>
+        <pre id="result" class="result-box">Waiting for input...</pre>
+      </section>
+    </section>
+  </div>
+
+  <script src="insights.js"></script>
+</body>
+</html>

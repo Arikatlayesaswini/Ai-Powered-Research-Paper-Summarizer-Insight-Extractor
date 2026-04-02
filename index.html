@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Research Paper Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <h1>AI Research Paper Summarizer</h1>
+      <!-- Logo under title -->
+      <img src="logo.png" alt="App logo" class="app-logo" />
+      <p class="app-subtitle">
+        Choose what you want to do with your research paper.
+      </p>
+    </header>
+
+    <section class="home-hero">
+      <div class="home-card-row">
+        <a href="summary.html" class="home-card">
+          <div class="home-card-header">
+            <span class="home-card-emoji">📄</span>
+            <span class="home-card-title">Summary</span>
+          </div>
+          <p class="home-card-text">
+            Generate short, medium, or long summaries with key points.
+          </p>
+        </a>
+
+        <a href="insights.html" class="home-card">
+          <div class="home-card-header">
+            <span class="home-card-emoji">💡</span>
+            <span class="home-card-title">Key Insights</span>
+          </div>
+          <p class="home-card-text">
+            See main contributions, methods, and results at a glance.
+          </p>
+        </a>
+
+        <a href="qa.html" class="home-card">
+          <div class="home-card-header">
+            <span class="home-card-emoji">❓</span>
+            <span class="home-card-title">Ask a Question</span>
+          </div>
+          <p class="home-card-text">
+            Ask natural questions about the paper and get clear answers.
+          </p>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // If not logged in, send to login page
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

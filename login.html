@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - AI Research Paper Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <h1>Login</h1>
+      <p class="app-subtitle">Enter credentials to access the application.</p>
+    </header>
+
+    <section class="home-hero">
+      <div class="login-card">
+        <div class="login-card-header">Sign In</div>
+        <form id="loginForm">
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p class="login-hint">Use demo: <strong>admin / admin123</strong></p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Simple front-end check (for demo only)
+      if (username === "admin" && password === "admin123") {
+        // mark as logged in for this browser
+        localStorage.setItem("loggedIn", "true");
+        // go to main home page
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+  </script>
+</body>
+</html>

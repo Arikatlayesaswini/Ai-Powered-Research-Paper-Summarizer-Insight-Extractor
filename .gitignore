@@ -1,0 +1,10 @@
+# Ignore uploaded PDFs and temp data
+data/
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/

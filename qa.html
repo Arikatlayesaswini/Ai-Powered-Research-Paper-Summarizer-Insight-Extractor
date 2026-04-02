@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ask a Question • AI Research Paper Summarizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <h1>Ask a Question</h1>
+      <p class="app-subtitle">
+        Ask any question based on the last uploaded paper.
+      </p>
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <section class="content-section">
+      <div class="card">
+        <p>Type your question about this paper and click Ask.</p>
+        <input
+          type="text"
+          id="question"
+          class="input-text"
+          placeholder="Example: What are the main limitations?"
+        />
+        <button id="askBtn" class="primary">Ask</button>
+      </div>
+
+      <section class="results-section">
+        <h2 class="section-title">Answer</h2>
+        <pre id="result" class="result-box">Waiting for input...</pre>
+      </section>
+    </section>
+  </div>
+
+  <script src="qa.js"></script>
+</body>
+</html>
